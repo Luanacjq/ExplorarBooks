@@ -12,7 +12,7 @@
         <div class="container">
             <input type="checkbox" id="menu" class="container_botao">
             <label for="menu">
-                <span class="cabecalho_menu"></span>
+                <span class="cabecalho_menu container_imagem"></span>
             </label>
             <ul class="lista-menu">
                 <li class="lista-menu_titulo">Categorias</li>
@@ -32,13 +32,62 @@
                     <a href="#" class="lista-menu_link">Design & UX</a>
                 </li>
             </ul>
-            <img src="img/Logo.svg" alt="Logo ExplorarBooks">
+            <img class="container_imagem" src="img/Logo.svg" alt="Logo ExplorarBooks">
         </div>
         <div class="container">
-            <a class="container__imagem" href="#"><img src="img/Favoritos.svg" alt=""></a>
-            <a class="container__imagem" href="#"><img src="img/Compras.svg" alt=""></a>
-            <a class="container__imagem" href="#"><img src="img/Usuário.svg" alt=""></a>
-            </div>
+            <a class="container_img" href="#"><img src="img/Favoritos.svg" alt=""></a>
+            <a class="container_img" href="#"><img src="img/Compras.svg" alt=""></a>
+            <a class="container_img" href="#"><img src="img/Usuário.svg" alt=""></a>
+        </div>
     </header>
+    <section class="banner">
+        <h2 class="banner_titulo">Já sabe por onde começar?</h2>
+        <p class="banner_paragrafo">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
+        <input type="search" class="banner_pesquisa" placeholder="Qual será sua próxima leitura?">
+    </section>
+    <section class="carrossel">
+        <h2 class="carrossel_titulo">ÚLTIMOS LANÇAMENTOS</h2>
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="img/Angular.svg" alt="Angular"></div>
+                <div class="swiper-slide"><img src="img/ApacheKafka.svg" alt="ApacheKafka"></div>
+                <div class="swiper-slide"><img src="img/Guia Front-end.svg" alt="Guia Front-end"></div>
+                <div class="swiper-slide"><img src="img/Tuning.svg" alt="Tuning"></div>
+                <div class="swiper-slide"><img src="img/Javascript.svg" alt="Javascript"></div>
+                <div class="swiper-slide"><img src="img/Construct2.svg" alt="Construct2"></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card_descricao">
+                <div class="descricao">
+                    <h3 class="descricao_titulo">Talvez você também se interesse por...</h3>
+                    <h2 class="descricao_titulo_livro">Angular 11 e Firebase</h2>
+                    <p class="descricao_texto">Construindo uma aplicação integrada com a plataforma do Google.</p>
+                </div>
+                <img class="descricao_imagem" src="img/Angular (1).svg" alt="">
+            </div>
+            <div class="card_botoes">
+                <ul class="botoes">
+                    <li class="botoes_item"><img src="img/Favoritos.svg" alt=""></li>
+                    <li class="botoes_item"><img src="img/Compras.svg" alt=""></li>
+                </ul>
+                <a class="botoes_ancora" href="">Saiba mais</a>
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 3,
+            spaceBetween: 10,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+        });
+    </script>
 </body>
 </html>
