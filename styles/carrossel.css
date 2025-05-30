@@ -44,6 +44,10 @@
     display: flex;
 }
 
+.descricao {
+    padding: 0 0.6em;
+}
+
 .descricao_titulo {
     color: var(--laranja);
     font-weight: 700;
@@ -70,4 +74,8 @@
     color: var(--branco);
     font-weight: 700;
     text-decoration: none;
+}
+
+.descricao_img {
+    margin: 0.7em 0;
 }
