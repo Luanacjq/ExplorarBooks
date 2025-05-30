@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    padding: 0 2em;
+
 }
 
 .cabecalho_menu {
@@ -14,6 +14,14 @@
     background-repeat: no-repeat;
     background-position: center;
     display: inline-block;
+}
+
+.container_botao:checked ~ .container_rotulo > .cabecalho_menu {
+    background-image: url("../img/menu_black_24dp\ 1.svg");
+}
+
+.container_botao:checked ~ .container_rotulo {
+    background: var(--azul-degrade);
 }
 
 .container {
@@ -120,6 +128,24 @@
 
     .opções_botão {
         display: none;
+    }
+
+    .opções_botão:checked ~ .opções_rotulo > .opções_item {
+        background: var(--azul-degrade);
+        color: var(--branco);
+    }
+
+    .opções_item {
+        padding: 2em 1em;
+    }
+
+    .lista-menu_item:hover {
+        background: var(--azul-degrade);
+    }
+
+    .lista-menu_item:hover > .lista-menu_link {
+        -webkit-text-fill-color: var(--branco);
+        text-decoration: none;
     }
 
 }
